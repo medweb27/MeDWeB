@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 //const uri = "mongodb+srv://MrCPU:mrcpu1234@cluster0.tglcx.mongodb.net/MrCPU?retryWrites=true&w=majority";
-const uri = "mongodb+srv://webmed:pavan123@cluster0.4imjz.mongodb.net/test?retryWrites=true&w=majority"
+const uri = miollu;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("medweb").collection("dets");
