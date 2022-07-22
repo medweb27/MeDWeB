@@ -1,0 +1,35 @@
+<%- include ('partials/header') %>
+<%- include ('partials/theme') %> 
+<style>
+    .tot{
+        margin: 40px 100px 40px 100px;
+    }
+</style>
+
+<div class="tot">
+<div class="bomma">
+    <center><img class="ims" src="/images/<%= data.imgpath %>" alt="IMAGE"></center>
+    <h1 class="naperu"><%= data.name %></h1>
+</div>
+<div class="tttt">
+    <h4 style="color: brown;">Information</h4>
+    <p> <%= data.info %></p>
+</div>
+<div class="tttt">
+    <h4 style="color: brown;">This is used for</h4>
+    <ol>
+        <% for(var i=0; i < data.used.length; i++) { %>
+            <li><%= data.used[i] %></li>
+        <% } %>
+    </ol>
+</div>
+<div class="webs">
+    <h4 style="color: brown;">Buy from online</h4>
+    <div class="pamu">
+    <p>Link : &nbsp;
+    <a style="color: black;" href="<%= data.buy %> "><b>&nbsp;Click Here</b></a></p>
+    </div>
+</div>
+<br><br><br><br><br>
+</div>
+<%- include ('partials/footer') %>

@@ -1,0 +1,34 @@
+<%- include ('partials/header') %>
+<%- include ('partials/theme') %> 
+<br><br><br><br><br>
+<center>
+<h3>All results</h3>
+</center>
+<style>
+    .ochesa{
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: 20px;
+        padding: 15px;
+    }
+    .dynimg{
+        height: 100px;
+        width: 200px;
+        margin-left: 400px;
+    }
+</style>
+<ul>
+    <% top.forEach(function(device){  %> 
+        <ul class="ochesa"><b><%= device.name %> </b>
+            <a style="margin-left: 50px;" href="/search/<%= device._id%>">click here to know more</a>
+            <img class="dynimg" src="/images/<%= device.imgpath%>" alt=""> <!--
+            <ul>
+                <% Object.keys(device).forEach(function(key){ %>
+                    <li><strong><%= key %></strong>: <%= device[key] %> </li>
+                <%  });%>  
+            </ul>-->
+        </ul>
+    <% }); %> 
+</ul>
+<br><br><br><br><br>
+<%- include ('partials/footer') %>
